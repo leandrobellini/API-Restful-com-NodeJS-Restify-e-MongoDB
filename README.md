@@ -18,8 +18,6 @@ Vou mostrar todo o passo-a-passo para se criar um ambiente de produção na Digi
 
 E tudo isso vamos fazer com Typescript. Uma linguagem que extende o Javascript com tipos estáticos e que permite a gente detectar problemas mais rapidamente no desenvolvimento.
 
-Aguardo você no curso.
-
 Para quem é este curso:
 Desenvolvedores que desejam conhecer os fundamentos de uma API REST
 Desenvolvedores que querem implementar um backend com Typescript
