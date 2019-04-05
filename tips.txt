@@ -1,0 +1,43 @@
+
+process -> consigo pegar dados do ambiente (variávies por exemplo) e eventos
+
+process.on('exit', () => { console.log('Script terminando') })  --> executo quando script sair
+
+funçoes e variáveis sao disponíveis apenas dentro do arquivo .js que as contem
+
+npm init -y   -> Responde sim para todas as perguntas ao fazer o package.json
+
+npm i pacote -> versao reduzida do install
+
+yargs -> dar nomes aos parametros. Caso a pessoa nao passar o parametro, ele exibe um help
+
+`O fatorial de ${num} é igual a ${fatorial(num)}`  -> template strings (acento agudo) (interpolacao)
+
+console.log(`1 + 1 = ${1+1}`)
+
+tsc --init   -> cria um tsconfig.json  (Instrutor mudou para ES6 e renomeou arquivos para .ts)
+
+tsc -> parse (ts-> js) dos arquivos, gerando .js no final
+
+npm i @types/node --save-dev  -> ts começar a entender que o ambiente é node e reconhecer as funcoes
+
+npm i @types/yargs --save-dev -> vai me dar a lista de metodos auto-complete (definicoes)
+
+"outDir": "dist" -> no arquivo tsconfig.json eu coloco onde os arquivos finais vao
+
+Chrome dá pra debugar código
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

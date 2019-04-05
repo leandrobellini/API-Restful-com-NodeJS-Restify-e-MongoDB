@@ -1,0 +1,19 @@
+{
+  "name": "node-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^13.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.0",
+    "@types/yargs": "^12.0.11"
+  }
+}

@@ -1,0 +1,5 @@
+nvm install node 6 -> instala uma versao específica do node
+
+nvm ls -> lista versoes disponíveis
+
+nvm use 9 -> set qual usar
