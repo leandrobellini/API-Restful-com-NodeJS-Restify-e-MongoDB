@@ -1,0 +1,14 @@
+*Deixando automático o build
+em um terminal rodar (tsc -w) para colocar o typescript em watch.. compilando sempre
+outro terminal com (nodemon dist/main.js)
+
+*Arquivo de configuração do tsc (tsconfig.json) apontando para ES6 e pasta output dist/main.js
+
+*Instalar o typescript
+    npm i typescript -g
+    tsc -w (para usar)
+
+*Arquivo types com dicas sobre metodos
+    npm i @types/restify
+
+
