@@ -10,7 +10,11 @@
   "author": "Leandro Bellini",
   "license": "ISC",
   "dependencies": {
-    "@types/restify": "^7.2.9",
+    "mongoose": "^5.4.22",
     "restify": "^6.3.4"
+  },
+  "devDependencies": {
+    "@types/restify": "^7.2.9",
+    "@types/mongoose": "^5.3.24"
   }
 }
