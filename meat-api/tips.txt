@@ -1,6 +1,6 @@
 *Deixando automático o build
-em um terminal rodar (tsc -w) para colocar o typescript em watch.. compilando sempre
-outro terminal com (nodemon dist/main.js)
+    em um terminal rodar (tsc -w) para colocar o typescript em watch.. compilando sempre
+    outro terminal com (nodemon dist/main.js)
 
 *Arquivo de configuração do tsc (tsconfig.json) apontando para ES6 e pasta output dist/main.js
 
@@ -10,5 +10,10 @@ outro terminal com (nodemon dist/main.js)
 
 *Arquivo types com dicas sobre metodos
     npm i @types/restify
+
+*Classe abstract define um template para quem herdar (terao que usar mesma estrutura)
+
+*Método static nao preciso estanciar uma classe para usar (nao preciso usar o New User())
+
 
 
