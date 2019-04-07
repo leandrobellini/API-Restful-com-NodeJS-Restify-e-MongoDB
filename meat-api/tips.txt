@@ -15,5 +15,37 @@
 
 *Método static nao preciso estanciar uma classe para usar (nao preciso usar o New User())
 
+*Start do mongodb
+    ./mongod --dbpath=../../data/db    (criou uma pasta data/db na mesma pasta dos arquivos do mongo; Porta 27017)
+    ./mongo (para conectar no banco)
+
+*Mongo estrutura de Documentos
+    Chave -> Valor; Chaves nao case-sensitive; Chaves nao podem ser duplicadas
+    Coleção são conjutos de documentos; 
+    Documentos podem ser dinamicos (variar - chaves diferentes) dentro da mesma colecao
+    Todo objeto possui um _id (identifica ele unicamnete dentro de uma colecao; Hexa-decimal de 12 bytes)
+    _id (12 bytes -> timestamp(4) idenficador_maquina(3) idenficador_processo(2) incremento(3))
+
+*Mongo commands
+    use nome_banco  (seleciona um banco; cria caso nao exista)
+    db              (mostra qual banco está selecionado)
+    var peter = {name: 'Peter', email: 'peter@marvel.com'}
+    db.heroes.insert(peter)     (insere na colecao; cria caso nao exista)
+    db.heroes.find()            (lista todos os documentos)
+    ObjectId()                  (gera um id unico)
+    db.heroes.find(_id: id)
+    db.heroes.find({name: 'Peter'})
+    db.heroes.findOne()         (retorna o primeiro objeto que ele encontrar)
+    var peter = db.heroes.findOne()
+        peter.name = 'Peter Parker'
+        peter.age = 22
+    db.heroes.update({_id: peter._id}, peter)   (irá atualizar o documento. Vai substituir o mesmo completamente)
+    db.heroes.update({_id: peter._id}, {'$set': {name: 'Peter Apenas'}})     (irá atualizar apenas oq eu determinar)
+    db.heroes.remove({_id: peter._id})
+
+*Robo 3T - Ferramenta visual para manipular documentos do mongodb
+    buscar documentos; atualizar; inserir; (de uma maneira muito fácil)
+
+
 
 
