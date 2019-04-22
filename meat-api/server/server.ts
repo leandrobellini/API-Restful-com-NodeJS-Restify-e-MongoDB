@@ -27,6 +27,8 @@ export class Server{
                     resolve(this.application)
                 })
 
+                //routes.forEach(route => route.applyRoutes(this.application))
+
                 //routes
                 for(let route of routes){
                     route.applyRoutes(this.application)

@@ -46,6 +46,8 @@
 *Robo 3T - Ferramenta visual para manipular documentos do mongodb
     buscar documentos; atualizar; inserir; (de uma maneira muito fácil)
 
+**JSONView - extensao no chrome pra ver JSON de forma mais elegante
+
 
 
 
