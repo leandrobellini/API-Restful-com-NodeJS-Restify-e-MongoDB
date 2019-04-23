@@ -24,7 +24,27 @@ class UserRouter extends Router{
         })
 
         application.post('/users', (req, resp, next) => {
-            let user 
+            let user = new User(req.body)
+            user.save().then(user => {
+                user.password = undefined //evita que o password seja enviado na confirmacao do POST
+                resp.json(user)
+                return next()
+            })
+        })
+
+        application.put('/users/:id', (req, resp, next) => {
+            const options = {overwhite: true}   //falo que vou substituir todo o conteudo desse document
+            User.update({_id: req.params.id}, req.body, options)
+                .exec().then(result => {
+                    if(result.n){   //sucesso! Achamos 1 cara pelo menos
+                        return User.findById(req.params.id) //retorno da promise (conteudo User document)
+                    }else{
+                        return resp.send(404)
+                    }
+                }).then(user => {                           //pego aqui o retorno pra mandar pro Browser
+                    resp.json(user)
+                    return next()
+                })
         })
     }
 }

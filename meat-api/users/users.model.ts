@@ -1,5 +1,11 @@
 import * as mongoose from 'mongoose';
 
+export interface User extends mongoose.Document{
+    name: String,
+    email: String,
+    password: String
+}
+
 const userSchema = new mongoose.Schema({
     name: {
         type:String
@@ -16,4 +22,4 @@ const userSchema = new mongoose.Schema({
 
   //User - users será minha colletion
   //User será a classe para manipular todos os documentos
-export const User = mongoose.model('User', userSchema)
+export const User = mongoose.model<User>('User', userSchema)

@@ -46,8 +46,8 @@
 *Robo 3T - Ferramenta visual para manipular documentos do mongodb
     buscar documentos; atualizar; inserir; (de uma maneira muito fácil)
 
-**JSONView - extensao no chrome pra ver JSON de forma mais elegante
+*JSONView - extensao no chrome pra ver JSON de forma mais elegante
 
-
+*Restlet Client - opcao ao POSTMAN que roda no chrome (https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm)
 
 

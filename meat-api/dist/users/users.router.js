@@ -20,6 +20,29 @@ class UserRouter extends router_1.Router {
                 return next();
             });
         });
+        application.post('/users', (req, resp, next) => {
+            let user = new users_model_1.User(req.body);
+            user.save().then(user => {
+                user.password = undefined; //evita que o password seja enviado na confirmacao do POST
+                resp.json(user);
+                return next();
+            });
+        });
+        application.put('/users/:id', (req, resp, next) => {
+            const options = { overwhite: true }; //falo que vou substituir todo o conteudo desse document
+            users_model_1.User.update({ _id: req.params.id }, req.body, options)
+                .exec().then(result => {
+                if (result.n) { //sucesso
+                    return users_model_1.User.findById(req.params.id); //retorno da promise (conteudo User document)
+                }
+                else {
+                    return resp.send(404);
+                }
+            }).then(user => {
+                resp.json(user);
+                return next();
+            });
+        });
     }
 }
 exports.usersRouter = new UserRouter();
